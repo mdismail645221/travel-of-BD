@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                loader: ()=> fetch(`http://localhost:5000/travels`),
+                loader: ()=> fetch(`https://travel-bd-server-gamma.vercel.app/travels`),
                 element: <Home></Home>,
             },
             {
@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'tavelsInfo/:id',
-                loader: (params)=> fetch(`http://localhost:5000/travels/${params.id}`),
+                loader: (params)=> fetch(`https://travel-bd-server-gamma.vercel.app/travels/${params.id}`),
                 element: <TourInfo></TourInfo>
             },
             {
