@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
-import {useLocation, useNavigate, googleSingIn} from 'react-router-dom'
+import {useLocation, useNavigate} from 'react-router-dom'
 
 const Login = () => {
 
@@ -73,7 +73,7 @@ const Login = () => {
 
     return (
         <div className='text-white my-5'>
-            <h1>Login</h1>
+            <h1 className='text-center'>Login</h1>
             <Form onSubmit={handleSubmit} className='w-50 mx-auto my-5 text-start bg-white p-4 border rounded shadow-lg'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label className='text-black' >Email address</Form.Label>

@@ -12,7 +12,7 @@ const TourCards = ({ singleFrom }) => {
 
 
     return (
-        <Link to={`tavelsInfo/${id}`}>
+        <Link to={`tourDetails/${id}`}>
             <div className={`card-container`} style={{ backgroundImage: `url(${image}`, width: "100%" }}>
                 <Card.Title id='card-title'>{name}</Card.Title>
             </div>

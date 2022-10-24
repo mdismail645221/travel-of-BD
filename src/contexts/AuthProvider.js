@@ -57,7 +57,7 @@ const AuthProvider = ({ children }) => {
 const [travels1, setTravels] = useState([])
     // loader data 
     useEffect(()=>{
-        fetch(`http://localhost:5000/travels/`)
+        fetch(`https://travel-bd-server-gamma.vercel.app/travels`)
         .then(res=> res.json())
         .then(data=> setTravels(data))
     },[])
