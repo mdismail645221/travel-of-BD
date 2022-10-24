@@ -30,10 +30,15 @@ const AuthProvider = ({ children }) => {
     }
 
     // google sing in 
-    const googleProvider = new GoogleAuthProvider();
-    const googleSingIn = () => {
+    const googleSingIn = (provider) => {
         setLoading(true)
-        signInWithPopup(auth, googleProvider)
+      return  signInWithPopup(auth, provider)
+    }
+
+
+    const githubSingIn = (githubProvider) => {
+        setLoading(true)
+        return signInWithPopup(auth, githubProvider)
     }
 
 
@@ -44,7 +49,7 @@ const AuthProvider = ({ children }) => {
         const unSubcribed = onAuthStateChanged(auth, currentUser => {
             console.log('OnAuthstateChanged uffect:', currentUser)
             setUser(currentUser)
-            setLoading(true)
+            setLoading(false)
         })
         return () => {
             unSubcribed()
@@ -72,7 +77,8 @@ const [travels1, setTravels] = useState([])
         logIn,
         lotOut,
         googleSingIn,
-        travels1
+        travels1,
+        githubSingIn
     }
 
 

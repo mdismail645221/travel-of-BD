@@ -8,13 +8,16 @@ const Home = () => {
 
 
     const travels1 = useLoaderData();
-    console.log(travels1)
+    const travels2 = (travels1[0])
 
 
     return (
-        <div className='row'>
+        <div className='row my-5'>
             <div className='col-md-5'>
-                <h2>COX\S BAZAR</h2>
+                <div className='text-white'>
+                        <h2 className='fw-bold display-4'>{travels2.name}</h2>
+                        <p className='text-justifed'>{travels2.description}</p>
+                </div>
             </div>
             <div className='col-md-7'>
                 <div className='TourCardsContainer'>

@@ -4,6 +4,7 @@ import Home from "../pages/Home/Home";
 import Login from "../shared/Login/Login";
 import Register from "../shared/Register/Register";
 import TourDetails from "../shared/TourDetails/TourDetails";
+import PrivateRoute from "./PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -20,7 +21,7 @@ export const router = createBrowserRouter([
             {
                 path: 'tourDetails/:id',
                 loader: ({params}) => fetch(`https://travel-bd-server-gamma.vercel.app/travels/${params.id}`),
-                element: <TourDetails></TourDetails>
+                element: <PrivateRoute><TourDetails></TourDetails></PrivateRoute>
             },
             {
                 path: 'login',
